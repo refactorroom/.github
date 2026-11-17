@@ -98,7 +98,7 @@ Each project works on its own, and they also work together. Evaris can call Inva
 
 ## 🧪 Proof of concept
 
-<a href="https://github.com/refactorroom/itervyn"><img src="https://raw.githubusercontent.com/refactorroom/itervyn/main/assets/banners/github-readme-1600x480.png" alt="Itervyn" width="480"></a>
+[![Itervyn cyborg panda poster](https://raw.githubusercontent.com/refactorroom/itervyn/main/assets/readme-itervyn-cyborg-panda-poster.svg)](https://github.com/refactorroom/itervyn)
 
 **[Itervyn](https://github.com/refactorroom/itervyn)**: *Execute. Verify. Refine. Repeat.*
 
