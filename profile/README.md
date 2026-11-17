@@ -16,7 +16,7 @@ AI coding agents are fast. Trusting what they produce is the hard part. Our thre
 
 | | Project | What it does | Get started |
 | --- | --- | --- | --- |
-| 🐼 | **[Panda Suite](https://github.com/refactorroom/panda-suite)** | 25 Agent Skills for engineering work, from requirements to release | `claude --plugin-dir .` |
+| 🐼 | **[Panda Suite](https://github.com/refactorroom/panda-suite)** | 25 Agent Skills for engineering work, from requirements to release | `npx panda-suite@latest install --all` |
 | 🛡️ | **[Invaris](https://github.com/refactorroom/invaris)** | Tests whether your checks catch a deliberate code change | `npx --package=invaris-cli@latest invaris check` |
 | 📊 | **[Evaris](https://github.com/refactorroom/evaris)** | Evaluates agents and skills with repeatable experiments | `npx evaris-cli@latest --help` |
 
@@ -34,6 +34,14 @@ Panda Suite is a set of 25 independent Agent Skills for Claude Code, OpenAI Code
 - **Plan and build:** `panda-plan`, `panda-spec`, `panda-execute`, `panda-refactor`, `panda-setup`
 - **Check:** `panda-review`, `panda-test`, `panda-debugger`, `panda-sec`, `panda-perf`, `panda-impact`
 - **Ship and document:** `panda-release`, `panda-write`, `panda-manual`, `panda-git`
+
+```sh
+npx panda-suite@latest install --all                                   # every skill, into ~/.agents/skills
+npx panda-suite@latest install --skill panda-plan --skill panda-review  # or just the ones you need
+npx panda-suite@latest update                                          # update the installed skills later
+```
+
+Or load it as a Claude Code or Codex plugin from a clone of the repository.
 
 Use a single skill on its own. Explaining one function doesn't need a project plan. When a task spans several steps, **Panda Lead** picks the smallest workflow that fits. The skills report what they actually verified and what they did not.
 
