@@ -1,10 +1,98 @@
-## Hi there 👋
+<div align="center">
 
-Ideas and writing on software engineering, architecture, and refactoring. Revisit, reflect, and understand a little better each time.
+# Refactor Room
 
-Hello :) I’m glad you found your way here. You’ll find writing about software development and probably a few other things mixed in. 
-Since you’re here, why not read something before you go? If even one idea sticks, I’ll feel like I’ve done my part. 
-A little extra cognitive load might help us get a little better every day. Let’s add a few more folds to the brain, one tiny 0.1% improvement at a time.
+**Open-source tools for engineering with AI agents, and for checking the results.**
+
+Revisit, reflect, and understand a little better each time. One 0.1% improvement at a time.
+
+</div>
 
 ---
-It takes small, steady steps. Sometimes we read the same thing and forget it; when we come back, the ideas settle and make a little more sense. I hope this can be your Refactor Room, too :)
+
+## Our projects
+
+AI coding agents are fast. Trusting what they produce is the hard part. Our three projects work together to help with that:
+
+| | Project | What it does | Get started |
+| --- | --- | --- | --- |
+| 🐼 | **[Panda Suite](https://github.com/refactorroom/panda-suite)** | 25 Agent Skills for engineering work, from requirements to release | `claude --plugin-dir .` |
+| 🛡️ | **[Invaris](https://github.com/refactorroom/invaris)** | Tests whether your checks catch a deliberate code change | `npx --package=invaris-cli@latest invaris check` |
+| 📊 | **[Evaris](https://github.com/refactorroom/evaris)** | Evaluates agents and skills with repeatable experiments | `npx evaris-cli@latest --help` |
+
+---
+
+### 🐼 Panda Suite: Agent Skills for engineering work
+
+[![Panda Suite](https://raw.githubusercontent.com/refactorroom/panda-suite/main/images/branding.png)](https://github.com/refactorroom/panda-suite)
+
+**Think clearly. Build carefully. Ship confidently.**
+
+Panda Suite is a set of 25 independent Agent Skills for Claude Code, OpenAI Codex, and other compatible hosts. Each skill handles one job:
+
+- **Discover:** `panda-requirements`, `panda-brainstorm`, `panda-research`, `panda-learn`
+- **Plan and build:** `panda-plan`, `panda-spec`, `panda-execute`, `panda-refactor`, `panda-setup`
+- **Check:** `panda-review`, `panda-test`, `panda-debugger`, `panda-sec`, `panda-perf`, `panda-impact`
+- **Ship and document:** `panda-release`, `panda-write`, `panda-manual`, `panda-git`
+
+Use a single skill on its own. Explaining one function doesn't need a project plan. When a task spans several steps, **Panda Lead** picks the smallest workflow that fits. The skills report what they actually verified and what they did not.
+
+[Repository](https://github.com/refactorroom/panda-suite) · [Documentation](https://refactorroom.github.io/panda-suite/) · [Usage guide](https://github.com/refactorroom/panda-suite/blob/main/docs/usage.md) · [ภาษาไทย](https://github.com/refactorroom/panda-suite/blob/main/README.th.md)
+
+---
+
+### 🛡️ Invaris: check that your checks work
+
+[![Invaris](https://raw.githubusercontent.com/refactorroom/invaris/main/assets/banners/github-readme-1600x480.png)](https://github.com/refactorroom/invaris)
+
+A passing check tells you little if it would also pass on broken code. **Invaris** finds out. It makes a deliberate change in a temporary copy of your project, then confirms that your guards or tests fail as expected.
+
+- **`challenge`:** add an expected violation and confirm a guard catches it, such as a forbidden import.
+- **`mutate`:** change the code and see whether your tests catch it (`KILLED`) or miss it (`SURVIVED`).
+- **`campaign`:** run several experiments together, with repeats, a mutation score, and an acceptance policy.
+- **JSON reports** with clear exit codes for CI pipelines, scripts, and AI agents.
+
+The Go core uses only the standard library. Builds are available for Linux and macOS, and you can also install with npm.
+
+[Repository](https://github.com/refactorroom/invaris) · [Documentation](https://refactorroom.github.io/invaris/) · [Releases](https://github.com/refactorroom/invaris/releases)
+
+---
+
+### 📊 Evaris: evaluate agents and skills reproducibly
+
+[![Evaris](https://raw.githubusercontent.com/refactorroom/evaris/main/assets/banners/github-readme-light-1600x480.svg)](https://github.com/refactorroom/evaris)
+
+An agent saying "done" doesn't prove the task is done. **Evaris** is a Go framework for evaluating agents and skills. It runs repeatable experiments and records the evidence.
+
+- **Blind preparation:** each case gets its own workspace and frozen inputs, and reviewer oracles stay out of the agent's workspace.
+- **Deterministic grading:** results from external agent runs are graded against your own criteria. What the agent claims is treated as evidence to check, not as proof.
+- **Comparisons:** compare baselines and revisions to spot regressions between skill or prompt versions.
+- **Works offline, no LLM API needed.** Reports come out as JSON and Markdown. Invaris verification is optional.
+
+[Repository](https://github.com/refactorroom/evaris) · [Workflow](https://github.com/refactorroom/evaris/blob/main/docs/workflow.md) · [Releases](https://github.com/refactorroom/evaris/releases)
+
+---
+
+## How they fit together
+
+```text
+   Panda Suite            Evaris                    Invaris
+   ───────────            ──────                    ───────
+   Skills guide    ──▶    Did the agent finish ──▶  Would your checks
+   the agent              the task? (graded         catch it if it
+                          experiments)              hadn't? (challenges,
+                                                    mutation)
+```
+
+Each project works on its own, and they also work together. Evaris can call Invaris to verify results, and Panda Suite workflows for both are on the way.
+
+---
+
+<div align="center">
+
+It takes small, steady steps. Sometimes we read something, forget it, and come back to find it makes more sense.<br>
+We hope this can be your Refactor Room, too :)
+
+⭐ **If any of these help you, a star helps others find them.**
+
+</div>
