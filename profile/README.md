@@ -88,6 +88,18 @@ Each project works on its own, and they also work together. Evaris can call Inva
 
 ---
 
+## 🧪 Proof of concept
+
+<a href="https://github.com/refactorroom/itervyn"><img src="https://raw.githubusercontent.com/refactorroom/itervyn/main/assets/banners/github-readme-1600x480.png" alt="Itervyn" width="480"></a>
+
+**[Itervyn](https://github.com/refactorroom/itervyn)**: *Execute. Verify. Refine. Repeat.*
+
+Itervyn is a local verification CLI for coding agents, terminal users, and CI, and the first test of how the stack fits together. It runs trusted Invaris checks and evaluates imported Evaris runs. It records one structured decision (`PASS`, `FAIL`, `INCONCLUSIVE`, or `ERROR`) and suggests a next step, such as `FIX_AND_REVERIFY`. The agent still makes the code changes and runs the fix loop. Itervyn only checks the evidence.
+
+> Early proof of concept (v0.1.0) for Linux and macOS, pinned to specific Invaris and Evaris versions.
+
+---
+
 <div align="center">
 
 It takes small, steady steps. Sometimes we read something, forget it, and come back to find it makes more sense.<br>
