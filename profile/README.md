@@ -88,7 +88,7 @@ An agent saying "done" doesn't prove the task is done. **Evaris** is a Go framew
 
 **[Tarosec](https://github.com/refactorroom/tarosec)** is a cybersecurity skill suite for Red, Blue, and Purple Teams. It covers security assessment, threat detection, incident response, and continuous security validation.
 
-[Repository](https://github.com/refactorroom/tarosec)
+[Repository](https://github.com/refactorroom/tarosec) · [Documentation](https://refactorroom.github.io/tarosec/)
 
 ---
 
