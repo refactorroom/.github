@@ -12,13 +12,14 @@ Revisit, reflect, and understand a little better each time. One 0.1% improvement
 
 ## Our projects
 
-AI coding agents are fast. Trusting what they produce is the hard part. Our three projects work together to help with that:
+AI coding agents are fast. Trusting what they produce is the hard part. Our projects help with that:
 
 | | Project | What it does | Get started |
 | --- | --- | --- | --- |
 | 🐼 | **[Panda Suite](https://github.com/refactorroom/panda-suite)** | 25 Agent Skills for engineering work, from requirements to release | `npx panda-suite@latest install --all` |
 | 🛡️ | **[Invaris](https://github.com/refactorroom/invaris)** | Tests whether your checks catch a deliberate code change | `npx --package=invaris-cli@latest invaris check` |
 | 📊 | **[Evaris](https://github.com/refactorroom/evaris)** | Evaluates agents and skills with repeatable experiments | `npx evaris-cli@latest --help` |
+| 🔐 | **[Tarosec](https://github.com/refactorroom/tarosec)** | Cybersecurity skills for Red, Blue, and Purple Teams | [Repository](https://github.com/refactorroom/tarosec) |
 
 ---
 
@@ -78,6 +79,14 @@ An agent saying "done" doesn't prove the task is done. **Evaris** is a Go framew
 - **Works offline, no LLM API needed.** Reports come out as JSON and Markdown. Invaris verification is optional.
 
 [Repository](https://github.com/refactorroom/evaris) · [Workflow](https://github.com/refactorroom/evaris/blob/main/docs/workflow.md) · [Releases](https://github.com/refactorroom/evaris/releases)
+
+---
+
+### 🔐 Tarosec: cybersecurity skills for security teams
+
+**[Tarosec](https://github.com/refactorroom/tarosec)** is a cybersecurity skill suite for Red, Blue, and Purple Teams. It covers security assessment, threat detection, incident response, and continuous security validation.
+
+[Repository](https://github.com/refactorroom/tarosec)
 
 ---
 
